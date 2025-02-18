@@ -90,6 +90,29 @@ class Perceptron:
         return np.mean(predictions == y)
 
 def plot_decision_regions(X, y, classifier, resolution=0.02):
+    """
+    Plot the decision regions of a classifier.
+
+    This function visualizes the decision boundaries of a classifier on a 2D feature space.
+    It creates a colored contour plot showing the decision regions and scatter plots
+    of the input data points.
+
+    Parameters:
+    -----------
+    X : array-like, shape (n_samples, 2)
+        The input samples. It is assumed to have exactly two features.
+    y : array-like, shape (n_samples,)
+        The target values (class labels) as integers.
+    classifier : object
+        A fitted classifier object that has a 'predict' method.
+    resolution : float, optional (default=0.02)
+        The step size of the mesh grid used for plotting.
+
+    Returns:
+    --------
+    None
+        This function does not return any value. It creates a plot using matplotlib.
+    """
     markers = ('s', 'x', 'o', '^', 'v')
     colors = ('red', 'blue', 'lightgreen', 'gray', 'cyan')
     cmap = ListedColormap(colors[:len(np.unique(y))])
