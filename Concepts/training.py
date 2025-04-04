@@ -30,5 +30,4 @@ y_pred = ppn.predict(X_test_std)
 
 #print out the accuracy score
 print("Accuracy:", accuracy_score(y_test, y_pred))
-# print("Accuracy:", ppn.score(X_test_std,y_test))
 
